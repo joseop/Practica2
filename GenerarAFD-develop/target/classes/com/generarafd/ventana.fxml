@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generarafd.VentanaController">
+   <children>
+      <BorderPane layoutX="191.0" layoutY="150.0" prefHeight="500.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane fx:id="CL" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vboxleft" alignment="CENTER" layoutX="86.0" layoutY="81.0" prefHeight="500.0" prefWidth="200.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="EXPRESION REGULAR">
+                           <effect>
+                              <Blend />
+                           </effect></Label>
+                        <Label text="Ingresar ER">
+                           <effect>
+                              <Blend />
+                           </effect></Label>
+                        <TextField fx:id="tFER" text="(0|1.0*.1)*.0*" />
+                        <Button fx:id="btnConvertir" mnemonicParsing="false" onAction="#convertir" text="Verificar y Convertir" />
+                        <Button mnemonicParsing="false" onAction="#cerrar" text="Cerrar Programa" />
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="179.0">
+                           <children>
+                              <Label text="Simbolos Reservados" />
+                              <Label text="A,B,C,D,E,F,G,.,|(,),+,*,λ.-" />
+                              <Label text="Operandos">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="0,1" />
+                              <Label text="Operadores">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text=".,|" />
+                              <Label text="Operadores Elevados">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="+,*" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <VBox fx:id="vbc" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="309.0" prefWidth="900.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="380.0" prefHeight="380.0" prefWidth="515.0" spacing="20.0">
+                           <children>
+                              <Label text="1. Transiciones" />
+                              <TextArea fx:id="tATransiciones" maxWidth="300.0" prefHeight="250.0" prefWidth="111.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="360.0" prefWidth="588.0" spacing="20.0">
+                           <children>
+                              <Label text="2. Cierre λ" />
+                              <TextArea fx:id="tACierreLambda" maxWidth="300.0" prefHeight="250.0" prefWidth="196.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxWidth="650.0" prefHeight="360.0" prefWidth="609.0" spacing="10.0">
+                           <children>
+                              <Label text="3. Evaluar Cierre λ" />
+                              <Label text="El espacio en blanco es estado de error">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="tAEvaluarCierreLambda" prefHeight="250.0" prefWidth="217.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxWidth="650.0" prefHeight="360.0" prefWidth="607.0" spacing="20.0">
+                           <children>
+                              <Label text="4. Estados Resultantes" />
+                              <TextArea fx:id="tAEstadosResultantes" prefHeight="250.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="304.0" prefWidth="900.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="304.0" prefWidth="785.0" spacing="20.0">
+                           <children>
+                              <Label text="5. Automata Finito Resultante" />
+                              <TextArea fx:id="tAAFResultante" prefHeight="250.0" prefWidth="410.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="304.0" prefWidth="619.0" spacing="20.0">
+                           <children>
+                              <Label text="6. Grupos de estado" />
+                              <TextArea fx:id="tAGrupos" prefHeight="250.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="304.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <Label text="7. AFD Minimo" />
+                              <TextArea fx:id="tAAFDM" prefHeight="250.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextArea>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

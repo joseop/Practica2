@@ -33,6 +33,13 @@ public class VentanaController {
         ConstruirAFDSinLambda.vaciar();
         CierreLambda.vaciar();
         AFDMinimo.vaciar();
+        tATransiciones.setText(null);
+        tACierreLambda.setText(null);
+        tAEvaluarCierreLambda.setText(null);
+        tAEstadosResultantes.setText(null);
+        tAAFResultante.setText(null);
+        tAGrupos.setText(null);
+        tAAFDM.setText(null);
     }
 
     @FXML
